@@ -91,7 +91,9 @@ See: https://aws.amazon.com/blogs/aws/new-aws-price-list-api/
                 }
             }
 
-            out.AddMember(attributes["instanceType"], m.value, out.GetAllocator());
+            Document::AllocatorType& a = out.GetAllocator();
+            Value instanceType(attributes["instanceType"], a);
+            out.AddMember(instanceType, m.value, a);
         }
 
         fp = fopen(filename, "w");
