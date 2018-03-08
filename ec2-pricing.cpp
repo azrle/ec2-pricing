@@ -67,7 +67,8 @@ See: https://aws.amazon.com/blogs/aws/new-aws-price-list-api/
 
         for (auto& m : d["products"].GetObject()) {
             if (!m.value.IsObject()) continue; // some of objects has been moved to out
-            if (m.value["productFamily"] != "Compute Instance" || !m.value.HasMember("attributes")) continue;
+            if (!checkstringValue(m.value, "productFamily", "Compute Instance")) continue;
+            if (!m.value.HasMember("attributes")) continue;
 
             auto& attributes = m.value["attributes"];
             if ( !checkstringValue(attributes, "tenancy"        , "Shared") ) continue;
