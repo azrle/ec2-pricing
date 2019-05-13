@@ -32,20 +32,24 @@ See: https://aws.amazon.com/blogs/aws/new-aws-price-list-api/
         return 2;
     }
     const std::map<const char* , const char*> LOCATIONS = {
-    { "us-east-1.json"      , "US East (N. Virginia)"     },
-    { "us-east-2.json"      , "US East (Ohio)"            },
-    { "us-west-1.json"      , "US West (N. California)"   },
-    { "us-west-2.json"      , "US West (Oregon)"          },
-    { "ca-central-1.json"   , "Canada (Central)"          },
-    { "eu-west-1.json"      , "EU (Ireland)"              },
-    { "eu-central-1.json"   , "EU (Frankfurt)"            },
-    { "eu-west-2.json"      , "EU (London)"               },
-    { "ap-northeast-1.json" , "Asia Pacific (Tokyo)"      },
-    { "ap-northeast-2.json" , "Asia Pacific (Seoul)"      },
-    { "ap-southeast-1.json" , "Asia Pacific (Singapore)"  },
-    { "ap-southeast-2.json" , "Asia Pacific (Sydney)"     },
-    { "ap-south-1.json"     , "Asia Pacific (Mumbai)"     },
-    { "sa-east-1.json"      , "South America (Sao Paulo)" },
+    { "us-east-1.json"      , "US East (N. Virginia)"      },
+    { "us-east-2.json"      , "US East (Ohio)"             },
+    { "us-west-1.json"      , "US West (N. California)"    },
+    { "us-west-2.json"      , "US West (Oregon)"           },
+    { "ca-central-1.json"   , "Canada (Central)"           },
+    { "eu-west-1.json"      , "EU (Ireland)"               },
+    { "eu-west-2.json"      , "EU (London)"                },
+    { "eu-west-3.json"      , "EU (Paris)"                 },
+    { "eu-central-1.json"   , "EU (Frankfurt)"             },
+    { "eu-north-1.json"     , "EU (Stockholm)"             },
+    { "ap-northeast-1.json" , "Asia Pacific (Tokyo)"       },
+    { "ap-northeast-2.json" , "Asia Pacific (Seoul)"       },
+    { "ap-northeast-3.json" , "Asia Pacific (Osaka-Local)" },
+    { "ap-southeast-1.json" , "Asia Pacific (Singapore)"   },
+    { "ap-southeast-2.json" , "Asia Pacific (Sydney)"      },
+    { "ap-south-1.json"     , "Asia Pacific (Mumbai)"      },
+    { "ap-east-1.json"      , "Asia Pacific (Hong Kong)"   },
+    { "sa-east-1.json"      , "South America (Sao Paulo)"  },
     };
 
     FILE* fp = fopen(argv[1], "r");
